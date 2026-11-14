@@ -128,7 +128,21 @@
     .foot-note{font-size:9px;color:#777084;letter-spacing:1px}
     .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
     .reveal.visible{opacity:1;transform:translateY(0)}
-    @media(max-width:900px){.hero-grid{gap:28px;grid-template-columns:1.1fr .9fr}.portrait-frame{width:230px}.portrait-stage{min-height:360px}.orbit{width:330px}.stack-grid{grid-template-columns:repeat(2,1fr)}}
+    .metrics{padding:0 0 8px}
+    .metrics-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+    .metric{padding:20px 14px;text-align:center;border:1px solid var(--line);border-radius:16px;background:linear-gradient(145deg,#151321cc,#0f0e17e6)}
+    .metric b{display:block;font:800 26px Orbitron,sans-serif;background:linear-gradient(105deg,#c39bff,#68e8d9);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .metric span{display:block;margin-top:8px;font:10px "DM Mono",monospace;letter-spacing:1.2px;color:var(--muted);text-transform:uppercase}
+    .sys-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .sys-card{padding:24px;transition:.3s}
+    .sys-card:hover{border-color:#a66cff66;transform:translateY(-4px)}
+    .sys-card .sys-icon{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;color:var(--purple);background:#a66cff19;border:1px solid #a66cff45;font-size:17px;margin-bottom:16px}
+    .sys-card h3{font:600 12px "DM Mono",monospace;letter-spacing:1.5px;color:var(--cyan);text-transform:uppercase;margin-bottom:10px}
+    .sys-card p{font-size:11px;line-height:1.75;color:var(--muted)}
+    .sys-card .stack-items{margin-top:14px}
+    .arch-band{margin-top:14px;padding:26px;text-align:center}
+    .arch-band h3{font:600 11px "DM Mono",monospace;letter-spacing:1.5px;color:var(--cyan);text-transform:uppercase;margin-bottom:16px}
+    @media(max-width:900px){.hero-grid{gap:28px;grid-template-columns:1.1fr .9fr}.portrait-frame{width:230px}.portrait-stage{min-height:360px}.orbit{width:330px}.stack-grid{grid-template-columns:repeat(2,1fr)}.metrics-grid{grid-template-columns:repeat(3,1fr)}.sys-grid{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:700px){
       .wrap{width:min(100% - 34px,var(--max))}.nav-links,.nav-contact{display:none}.menu-btn{display:block}
       .nav-links.open{display:flex;position:absolute;top:67px;left:17px;right:17px;flex-direction:column;align-items:stretch;gap:0;padding:10px;background:#100f19f5;border:1px solid var(--line);border-radius:15px;backdrop-filter:blur(18px)}
@@ -138,6 +152,7 @@
       h1{letter-spacing:-3px}.scroll-hint{display:none}section{padding:75px 0}
       .section-head{display:block}.section-desc{margin-top:15px}.about-layout,.project-feature{grid-template-columns:1fr}.about-grid{grid-template-columns:repeat(2,1fr)}
       .stack-grid{grid-template-columns:1fr}.project-side{grid-template-rows:auto}.contact-panel{align-items:flex-start;flex-direction:column}.contact-actions{width:100%}.contact-actions .btn{justify-content:center}
+      .metrics-grid{grid-template-columns:repeat(2,1fr)}.sys-grid{grid-template-columns:1fr}.metric b{font-size:22px}
       .footer-inner{flex-direction:column;text-align:center}
     }
     @media(max-width:390px){.about-grid{grid-template-columns:1fr}.feature-list{grid-template-columns:1fr}.portrait-label{right:-8px}.hero-actions .btn{width:100%;justify-content:center}}
@@ -149,7 +164,7 @@
     <nav class="wrap">
       <a class="brand" href="#home"><b>❖</b> VANITAS</a>
       <div class="nav-links" id="navLinks">
-        <a href="#home" class="active">Home</a><a href="#about">About</a><a href="#stack">Expertise</a><a href="#work">Projects</a><a href="#contact">Contact</a>
+        <a href="#home" class="active">Home</a><a href="#about">About</a><a href="#stack">Expertise</a><a href="#work">Projects</a><a href="#platform">Platform</a><a href="#contact">Contact</a>
       </div>
       <a class="nav-contact" href="mailto:omar@vanitasbot.my.id">LET'S TALK ↗</a>
       <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
@@ -162,8 +177,8 @@
         <div class="hero-content">
           <div class="eyebrow">Independent Developer <span style="color:#746b82">/</span> Digital Builder</div>
           <h1><span>OMAR</span><span>VANITAS.</span></h1>
-          <p class="hero-role">Software Developer · AI · Bots · Automation · Web</p>
-          <p class="hero-copy">I build intelligent systems, useful tools, and digital experiences — turning ideas into software that works.</p>
+          <p class="hero-role">Full-Stack Developer · AI · Security · Automation · Web</p>
+          <p class="hero-copy">I design and ship complete platforms — like <b style="color:#e8d9ff">Vanitas</b>, a production API gateway with AI, native mobile &amp; desktop clients and on-chain credit — turning ideas into software that works.</p>
           <p class="hero-quote">“Building systems, not just commands.”</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#work">Explore my work <i class="fa-solid fa-arrow-down"></i></a>
@@ -186,11 +201,21 @@
       <div class="scroll-hint">SCROLL TO EXPLORE <i class="fa-solid fa-arrow-down"></i></div>
     </section>
 
+    <section class="metrics" aria-label="Project highlights">
+      <div class="wrap metrics-grid">
+        <div class="metric reveal"><b>13</b><span>Test suites · CI-gated</span></div>
+        <div class="metric reveal"><b>10</b><span>CI jobs on every push</span></div>
+        <div class="metric reveal"><b>4</b><span>Platforms · one gateway</span></div>
+        <div class="metric reveal"><b>7</b><span>Locales · Arabic-first RTL</span></div>
+        <div class="metric reveal"><b>0$</b><span>Setup cost · runs DB-free</span></div>
+      </div>
+    </section>
+
     <section id="about">
       <div class="wrap">
         <div class="section-head reveal"><div><div class="section-kicker">01 / The person behind the code</div><h2>Beyond the screen.</h2></div><p class="section-desc">Curiosity, engineering, and a constant drive to make digital things better.</p></div>
         <div class="about-layout">
-          <div class="about-panel reveal"><div class="big-mark">❖</div><p>I'm Omar, a software developer focused on creating practical digital products and connected systems. My work spans web development, backend engineering, AI integrations, bots, and automation — with an emphasis on clean structure, thoughtful details, and reliable results.</p></div>
+          <div class="about-panel reveal"><div class="big-mark">❖</div><p>I'm Omar, a software developer focused on creating practical digital products and connected systems. My work spans web development, backend engineering, AI integrations, bots, and automation — with an emphasis on clean structure, thoughtful details, and reliable results. My flagship work is <b style="color:#e8d9ff">Vanitas</b>: a production-ready, full-stack platform that puts one secure API gateway in front of every client — web, mobile, desktop and bots.</p></div>
           <div class="about-grid">
             <article class="info-card reveal"><i class="fa-solid fa-code"></i><h3>Software Development</h3><p>Building maintainable applications and well-structured software.</p></article>
             <article class="info-card reveal"><i class="fa-solid fa-brain"></i><h3>Artificial Intelligence</h3><p>Connecting AI capabilities to useful real-world workflows.</p></article>
@@ -205,12 +230,12 @@
       <div class="wrap">
         <div class="section-head reveal"><div><div class="section-kicker">02 / Tools of the trade</div><h2>My tech stack.</h2></div><p class="section-desc">A selection of technologies I work with across development, infrastructure, and delivery.</p></div>
         <div class="stack-grid">
-          <div class="stack-panel reveal"><h3>01 — Languages</h3><div class="stack-items"><span class="tech">JavaScript</span><span class="tech">Python</span><span class="tech">HTML5</span><span class="tech">CSS3</span><span class="tech">Bash</span></div></div>
-          <div class="stack-panel reveal"><h3>02 — Backend</h3><div class="stack-items"><span class="tech">Node.js</span><span class="tech">Express.js</span><span class="tech">REST APIs</span><span class="tech">Axios</span><span class="tech">Baileys</span></div></div>
-          <div class="stack-panel reveal"><h3>03 — Databases</h3><div class="stack-items"><span class="tech">MongoDB</span><span class="tech">SQLite</span><span class="tech">Firebase</span></div></div>
-          <div class="stack-panel reveal"><h3>04 — Tools</h3><div class="stack-items"><span class="tech">Git</span><span class="tech">GitHub</span><span class="tech">Linux</span><span class="tech">Termux</span><span class="tech">VS Code</span><span class="tech">FFmpeg</span></div></div>
-          <div class="stack-panel reveal"><h3>05 — Deployment</h3><div class="stack-items"><span class="tech">Vercel</span><span class="tech">Netlify</span></div></div>
-          <div class="stack-panel reveal"><h3>06 — Focus Areas</h3><div class="stack-items"><span class="tech">System Design</span><span class="tech">Automation</span><span class="tech">AI Integration</span><span class="tech">Web Apps</span></div></div>
+          <div class="stack-panel reveal"><h3>01 — Languages</h3><div class="stack-items"><span class="tech">TypeScript</span><span class="tech">JavaScript</span><span class="tech">Python</span><span class="tech">Go</span><span class="tech">Kotlin</span><span class="tech">Swift</span><span class="tech">C#</span><span class="tech">Solidity</span><span class="tech">Bash</span></div></div>
+          <div class="stack-panel reveal"><h3>02 — Backend</h3><div class="stack-items"><span class="tech">Node.js</span><span class="tech">Express.js</span><span class="tech">Python FastAPI</span><span class="tech">REST APIs</span><span class="tech">OAuth 2.0</span><span class="tech">Baileys</span><span class="tech">Axios</span></div></div>
+          <div class="stack-panel reveal"><h3>03 — Databases</h3><div class="stack-items"><span class="tech">PostgreSQL</span><span class="tech">MongoDB</span><span class="tech">SQLite</span><span class="tech">Firebase</span></div></div>
+          <div class="stack-panel reveal"><h3>04 — Frontend</h3><div class="stack-items"><span class="tech">React 19</span><span class="tech">Vite</span><span class="tech">Tailwind v4</span><span class="tech">HTML5</span><span class="tech">CSS3</span></div></div>
+          <div class="stack-panel reveal"><h3>05 — Tools & CI</h3><div class="stack-items"><span class="tech">Git</span><span class="tech">GitHub Actions</span><span class="tech">Docker</span><span class="tech">Linux</span><span class="tech">Termux</span><span class="tech">FFmpeg</span><span class="tech">Foundry</span></div></div>
+          <div class="stack-panel reveal"><h3>06 — Deployment</h3><div class="stack-items"><span class="tech">Vercel</span><span class="tech">Netlify</span><span class="tech">Render</span><span class="tech">Docker Compose</span><span class="tech">Ollama</span></div></div>
         </div>
       </div>
     </section>
@@ -222,21 +247,39 @@
           <article class="project-card primary reveal">
             <div class="project-top"><div class="project-symbol">❖</div><span class="project-index">FEATURED PROJECT / 001</span></div>
             <h3>VANITAS</h3>
-            <p>A modular WhatsApp automation system designed to bring powerful tools, intelligent interactions, and flexible features together in one platform.</p>
-            <div class="feature-list"><span><i class="fa-solid fa-check"></i> AI integrations</span><span><i class="fa-solid fa-check"></i> Bot automation</span><span><i class="fa-solid fa-check"></i> Media processing</span><span><i class="fa-solid fa-check"></i> Group management</span><span><i class="fa-solid fa-check"></i> Plugin architecture</span><span><i class="fa-solid fa-check"></i> API integrations</span></div>
-            <a class="btn btn-primary" href="https://vanitasbot.my.id" target="_blank" rel="noreferrer">Explore Vanitas <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <p>A production-ready, full-stack platform that puts <b style="color:#e8d9ff">one secure API gateway</b> in front of every client — the web app, Android, iOS and Windows clients, WhatsApp &amp; Discord bots, and third-party apps signing in <i>with</i> Vanitas. Auth, granular permissions, audit logging and an AI assistant all sit behind that single gateway. Runs out of the box with no database and no paid API key.</p>
+            <div class="feature-list"><span><i class="fa-solid fa-check"></i> OAuth 2.0 · 7 providers + IdP</span><span><i class="fa-solid fa-check"></i> RBAC &amp; API-key scopes</span><span><i class="fa-solid fa-check"></i> AI assistants + Image Studio</span><span><i class="fa-solid fa-check"></i> Android / iOS / Windows clients</span><span><i class="fa-solid fa-check"></i> On-chain credit · EIP-712</span><span><i class="fa-solid fa-check"></i> 13 offline test suites</span><span><i class="fa-solid fa-check"></i> Audit logs &amp; webhooks</span><span><i class="fa-solid fa-check"></i> Arabic-first RTL · 7 locales</span></div>
+            <div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn btn-primary" href="https://vanitasbot.my.id" target="_blank" rel="noreferrer">Explore Vanitas <i class="fa-solid fa-arrow-up-right-from-square"></i></a><a class="btn btn-ghost" href="https://github.com/sovereignempirex-ux/vanitas" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i> Source code</a></div>
           </article>
           <div class="project-side">
-            <article class="project-card mini-project reveal"><div><div class="project-symbol"><i class="fa-solid fa-layer-group"></i></div><h3>Vanitas Ecosystem</h3><p>A connected collection of digital tools and platforms built around the Vanitas identity.</p></div><span class="project-index">ECOSYSTEM / 002</span></article>
-            <article class="project-card mini-project reveal"><div><div class="project-symbol"><i class="fa-solid fa-terminal"></i></div><h3>Developer Utilities</h3><p>Practical tools, integrations, and workflows that make development more efficient.</p></div><span class="project-index">TOOLS / 003</span></article>
+            <article class="project-card mini-project reveal"><div><div class="project-symbol"><i class="fa-solid fa-shield-halved"></i></div><h3>Security Engine</h3><p>Server-side authorization on every admin endpoint, rate limiting at four levels, TOTP 2FA and audit logging on every sensitive action.</p></div><span class="project-index">SECURITY / 002</span></article>
+            <article class="project-card mini-project reveal"><div><div class="project-symbol"><i class="fa-solid fa-terminal"></i></div><h3>Developer Portal</h3><p>OpenAPI document, interactive API playground, SDK examples, an open /wiki and a Ctrl+K command palette.</p></div><span class="project-index">DEV TOOLS / 003</span></article>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="platform">
+      <div class="wrap">
+        <div class="section-head reveal"><div><div class="section-kicker">04 / Inside the build</div><h2>One gateway. Every client.</h2></div><p class="section-desc">Every subsystem of the Vanitas platform — designed, built, tested and shipped end-to-end.</p></div>
+        <div class="sys-grid">
+          <article class="sys-card stack-panel reveal"><div class="sys-icon"><i class="fa-solid fa-fingerprint"></i></div><h3>Identity &amp; Auth</h3><p>OAuth 2.0 across Google, GitHub, Discord, Microsoft, GitLab, LinkedIn and Twitch, plus email/password, TOTP 2FA — and Vanitas itself as an identity provider so third-party apps can "Sign in with Vanitas".</p><div class="stack-items"><span class="tech">OAuth 2.0</span><span class="tech">TOTP</span><span class="tech">OIDC</span><span class="tech">Sessions</span></div></article>
+          <article class="sys-card stack-panel reveal"><div class="sys-icon"><i class="fa-solid fa-shield-halved"></i></div><h3>Security Core</h3><p>Server-side RBAC, per-key scope validation, rate limiting at IP / user / key / endpoint levels, input sanitisation, XSS &amp; CSRF protections, HttpOnly cookies and CSP/HSTS headers.</p><div class="stack-items"><span class="tech">RBAC</span><span class="tech">Scopes</span><span class="tech">Rate limits</span><span class="tech">Audit log</span></div></article>
+          <article class="sys-card stack-panel reveal"><div class="sys-icon"><i class="fa-solid fa-brain"></i></div><h3>AI Suite</h3><p>Assistants for code, API, documentation, security and analytics, plus web search and an Image Studio — powered by a Python FastAPI microservice with a TypeScript fallback and a local-first provider chain.</p><div class="stack-items"><span class="tech">FastAPI</span><span class="tech">Ollama</span><span class="tech">Fallbacks</span></div></article>
+          <article class="sys-card stack-panel reveal"><div class="sys-icon"><i class="fa-solid fa-mobile-screen-button"></i></div><h3>Multi-platform Clients</h3><p>Kotlin (Android), Swift (iOS) and C#/WPF (Windows) — each with its own offline test suite, all talking to the same authenticated gateway.</p><div class="stack-items"><span class="tech">Kotlin</span><span class="tech">Swift</span><span class="tech">C# WPF</span><span class="tech">React</span></div></article>
+          <article class="sys-card stack-panel reveal"><div class="sys-icon"><i class="fa-solid fa-link"></i></div><h3>On-chain Credit</h3><p>VanitasCredit — a Solidity off-chain ledger authorised with EIP-712 signatures. Any relayer can submit, so users pay no gas. 35 Forge tests, zero external dependencies.</p><div class="stack-items"><span class="tech">Solidity</span><span class="tech">EIP-712</span><span class="tech">Foundry</span></div></article>
+          <article class="sys-card stack-panel reveal"><div class="sys-icon"><i class="fa-solid fa-gauge-high"></i></div><h3>Platform Services</h3><p>A Go sliding-window rate limiter shared across gateway instances, a Python/R analytics service with anomaly detection, PostgreSQL with idempotent schema migrations — or a zero-config in-memory mode.</p><div class="stack-items"><span class="tech">Go</span><span class="tech">Python / R</span><span class="tech">PostgreSQL</span><span class="tech">Docker</span></div></article>
+        </div>
+        <div class="arch-band philosophy reveal" style="margin-top:14px">
+          <h3>Architecture — how it all connects</h3>
+          <div class="flow" style="margin-bottom:0"><span>WEB</span><i class="fa-solid fa-plus"></i><span>ANDROID</span><i class="fa-solid fa-plus"></i><span>IOS</span><i class="fa-solid fa-plus"></i><span>WINDOWS</span><i class="fa-solid fa-plus"></i><span>BOTS</span><i class="fa-solid fa-arrow-right"></i><span style="border-color:#a66cff77;color:#e8d9ff">API GATEWAY</span><i class="fa-solid fa-arrow-right"></i><span>AUTH</span><i class="fa-solid fa-arrow-right"></i><span>RBAC</span><i class="fa-solid fa-arrow-right"></i><span>AI · ANALYTICS · LIMITER</span></div>
         </div>
       </div>
     </section>
 
     <section>
       <div class="wrap">
-        <div class="section-head reveal"><div><div class="section-kicker">04 / How I think</div><h2>Build. Learn. Repeat.</h2></div></div>
+        <div class="section-head reveal"><div><div class="section-kicker">05 / How I think</div><h2>Build. Learn. Repeat.</h2></div></div>
         <div class="philosophy reveal"><div class="flow"><span>IDEA</span><i class="fa-solid fa-arrow-right"></i><span>DESIGN</span><i class="fa-solid fa-arrow-right"></i><span>CODE</span><i class="fa-solid fa-arrow-right"></i><span>TEST</span><i class="fa-solid fa-arrow-right"></i><span>IMPROVE</span><i class="fa-solid fa-arrow-right"></i><span>SHIP</span></div><blockquote>“Every error is another thing to learn from.”</blockquote></div>
       </div>
     </section>
@@ -244,7 +287,7 @@
     <section id="contact">
       <div class="wrap">
         <div class="contact-panel reveal">
-          <div><div class="section-kicker">05 / Start a conversation</div><h2>Have an idea?<br>Let's build it.</h2><p>For collaborations, projects, or just a good conversation about technology.</p></div>
+          <div><div class="section-kicker">06 / Start a conversation</div><h2>Have an idea?<br>Let's build it.</h2><p>For collaborations, projects, or just a good conversation about technology.</p></div>
           <div class="contact-actions"><a class="btn btn-primary" href="mailto:omar@vanitasbot.my.id"><i class="fa-regular fa-envelope"></i> omar@vanitasbot.my.id</a><a class="btn btn-ghost" href="https://vanitasbot.my.id" target="_blank" rel="noreferrer"><i class="fa-solid fa-globe"></i> vanitasbot.my.id</a></div>
         </div>
       </div>
