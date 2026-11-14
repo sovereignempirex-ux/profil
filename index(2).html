@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08070d">
+  <meta name="description" content="Omar — Software Developer building intelligent systems, automation, bots and digital experiences.">
+  <meta property="og:title" content="❖ VANITAS — Omar">
+  <meta property="og:description" content="Building systems, not just commands.">
+  <meta property="og:image" content="https://qu.ax/x/OlX7T.jpg">
+  <meta property="og:type" content="website">
+  <title>❖ VANITAS — Omar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    :root{--bg:#08070d;--panel:#100f19;--panel2:#151321;--line:rgba(176,125,255,.16);--purple:#a66cff;--cyan:#54e5d4;--text:#f4f0fb;--muted:#9690a7;--max:1160px}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(ellipse at 14% 9%,rgba(127,68,210,.17),transparent 34%),radial-gradient(ellipse at 88% 35%,rgba(38,174,164,.09),transparent 29%),linear-gradient(180deg,#08070d,#0a0911 55%,#08070d)}
+    body:after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.12;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:54px 54px;mask-image:linear-gradient(to bottom,black,transparent 85%)}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit}
+    ::selection{background:rgba(166,108,255,.35);color:white}
+    ::-webkit-scrollbar{width:7px}::-webkit-scrollbar-track{background:#08070d}::-webkit-scrollbar-thumb{background:#68469b;border-radius:20px}
+    .wrap{width:min(var(--max),calc(100% - 48px));margin:auto}
+    .mono,.eyebrow,.nav a,.pill,.tech,.section-kicker,.foot-note{font-family:"DM Mono",monospace}
+    .nav-shell{position:fixed;top:0;left:0;right:0;z-index:50;padding:15px 0;transition:.3s}
+    .nav-shell.scrolled{background:rgba(8,7,13,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+    nav{display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{font:800 16px Orbitron,sans-serif;letter-spacing:3px;color:#e8d9ff;white-space:nowrap}
+    .brand b{color:var(--purple);font-size:21px;margin-right:7px}
+    .nav-links{display:flex;align-items:center;gap:27px}
+    .nav-links a{font:500 11px "DM Mono",monospace;letter-spacing:1.2px;color:var(--muted);text-transform:uppercase;transition:.25s}
+    .nav-links a:hover,.nav-links a.active{color:var(--text)}
+    .nav-links a.active:after{content:"";display:block;height:2px;background:linear-gradient(90deg,var(--purple),var(--cyan));margin-top:7px}
+    .nav-contact{border:1px solid var(--line);padding:10px 15px;border-radius:999px;font:500 11px "DM Mono",monospace;color:#e8d9ff;transition:.25s}
+    .nav-contact:hover{border-color:var(--purple);box-shadow:0 0 22px #a66cff26}
+    .menu-btn{display:none;background:none;border:1px solid var(--line);color:white;width:42px;height:42px;border-radius:12px}
+    .hero{min-height:100svh;display:grid;align-items:center;padding:130px 0 85px;position:relative}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:70px}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--cyan);font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-bottom:24px}
+    .eyebrow:before{content:"";width:26px;height:1px;background:var(--cyan)}
+    h1{font:900 clamp(54px,8.2vw,104px)/.98 Orbitron,sans-serif;letter-spacing:-5px;margin:0 0 24px}
+    h1 span{display:block;background:linear-gradient(105deg,#f7f0ff 5%,#c39bff 47%,#68e8d9 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero-role{font-size:clamp(15px,2vw,19px);color:#c4bdd2;letter-spacing:.4px;margin-bottom:18px}
+    .hero-copy{max-width:570px;color:var(--muted);font-size:15px;line-height:1.9}
+    .hero-quote{font:italic 14px Georgia,serif;color:var(--cyan);margin-top:21px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 19px;border-radius:11px;font-size:12px;font-weight:700;letter-spacing:.2px;transition:transform .25s,box-shadow .25s,border-color .25s}
+    .btn:hover{transform:translateY(-3px)}
+    .btn-primary{background:linear-gradient(110deg,#9560e8,#5cdbc9);color:#0a0910;box-shadow:0 10px 35px #a66cff24}
+    .btn-ghost{border:1px solid var(--line);color:#e8e0f2;background:#ffffff04}
+    .btn-ghost:hover{border-color:#a66cff80;box-shadow:0 10px 30px #a66cff16}
+    .social-row{display:flex;gap:10px;margin-top:30px}
+    .social{width:39px;height:39px;display:grid;place-items:center;border:1px solid var(--line);border-radius:12px;color:#aaa2b9;background:#ffffff03;transition:.25s}
+    .social:hover{color:var(--cyan);border-color:#54e5d466;transform:translateY(-3px)}
+    .portrait-stage{position:relative;display:grid;place-items:center;min-height:430px}
+    .orbit{position:absolute;width:min(390px,90vw);aspect-ratio:1;border:1px solid #a66cff38;border-radius:50%;animation:spin 26s linear infinite}
+    .orbit:before,.orbit:after{content:"";position:absolute;border:1px solid #54e5d42b;border-radius:50%;inset:25px}
+    .orbit:after{inset:53px;border-style:dashed;opacity:.6}
+    .orbit-dot{position:absolute;top:14%;right:13%;width:9px;height:9px;background:var(--cyan);border-radius:50%;box-shadow:0 0 20px var(--cyan)}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .portrait-glow{position:absolute;width:270px;aspect-ratio:1;border-radius:50%;background:linear-gradient(135deg,#a66cff66,#54e5d444);filter:blur(55px);opacity:.65}
+    .portrait-frame{position:relative;width:270px;aspect-ratio:1;border-radius:50%;padding:5px;background:conic-gradient(from 20deg,var(--purple),#27203a,var(--cyan),var(--purple));box-shadow:0 0 65px #a66cff2e,0 0 100px #54e5d410}
+    .portrait-frame img{width:100%;height:100%;display:block;object-fit:cover;object-position:center;border-radius:50%;border:5px solid var(--bg);background:#151321}
+    .portrait-label{position:absolute;bottom:22px;right:-4px;padding:12px 15px;background:#12101c;border:1px solid var(--line);border-radius:13px;box-shadow:0 12px 35px #0008}
+    .portrait-label strong{display:block;font:700 10px "DM Mono",monospace;letter-spacing:1.5px}
+    .portrait-label small{display:block;color:var(--muted);font-size:10px;margin-top:5px}
+    .status-dot{display:inline-block;width:7px;height:7px;background:#54e5a3;border-radius:50%;margin-right:7px;box-shadow:0 0 10px #54e5a3}
+    .scroll-hint{position:absolute;bottom:27px;left:50%;transform:translateX(-50%);color:#777084;font:10px "DM Mono",monospace;letter-spacing:2px;display:flex;gap:10px;align-items:center}
+    .scroll-hint i{color:var(--purple);animation:bob 1.6s infinite}
+    @keyframes bob{50%{transform:translateY(5px)}}
+    section{padding:105px 0}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:38px}
+    .section-kicker{font-size:10px;color:var(--cyan);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+    h2{font:700 clamp(28px,4vw,43px)/1.15 Orbitron,sans-serif;letter-spacing:-1.5px}
+    .section-desc{max-width:420px;color:var(--muted);font-size:13px;line-height:1.8}
+    .about-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:22px}
+    .about-panel,.info-card,.project-card,.stack-panel,.contact-panel{background:linear-gradient(145deg,#151321d9,#0f0e17ed);border:1px solid var(--line);border-radius:20px}
+    .about-panel{padding:30px;position:relative;overflow:hidden}
+    .about-panel:after{content:"❖";position:absolute;right:-12px;bottom:-55px;font:190px Orbitron;color:#a66cff0b}
+    .about-panel .big-mark{font:700 34px Orbitron;color:var(--purple);margin-bottom:22px}
+    .about-panel p{color:#b2aabd;font-size:14px;line-height:2;position:relative;z-index:1}
+    .about-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .info-card{padding:22px;transition:.3s}
+    .info-card:hover,.stack-panel:hover,.project-card:hover{border-color:#a66cff66;transform:translateY(-4px)}
+    .info-card i{font-size:18px;color:var(--cyan);margin-bottom:18px}
+    .info-card h3{font-size:13px;margin-bottom:8px}
+    .info-card p{font-size:11px;line-height:1.75;color:var(--muted)}
+    .stack-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .stack-panel{padding:24px;transition:.3s}
+    .stack-panel h3{font:600 11px "DM Mono",monospace;letter-spacing:1.5px;color:var(--cyan);text-transform:uppercase;margin-bottom:20px}
+    .stack-items{display:flex;flex-wrap:wrap;gap:8px}
+    .tech{font-size:10px;color:#d5cde0;padding:9px 11px;border:1px solid #ffffff12;border-radius:8px;background:#ffffff05;transition:.2s}
+    .tech:hover{border-color:#a66cff77;color:white;background:#a66cff15}
+    .project-feature{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:stretch}
+    .project-card{padding:34px;position:relative;overflow:hidden;transition:.3s}
+    .project-card.primary{background:radial-gradient(ellipse at 100% 0%,#8e58d72b,transparent 48%),linear-gradient(145deg,#171322,#0e0d16)}
+    .project-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:42px}
+    .project-symbol{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;color:var(--purple);background:#a66cff19;border:1px solid #a66cff45;font-size:22px}
+    .project-index{font:10px "DM Mono",monospace;color:#766d84;letter-spacing:2px}
+    .project-card h3{font:700 26px Orbitron,sans-serif;margin-bottom:14px}
+    .project-card p{font-size:13px;color:var(--muted);line-height:1.9;max-width:480px}
+    .feature-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:25px 0 30px}
+    .feature-list span{font-size:11px;color:#c9c1d5}
+    .feature-list i{color:var(--cyan);font-size:10px;margin-right:8px}
+    .project-side{display:grid;grid-template-rows:1fr 1fr;gap:14px}
+    .mini-project{padding:24px;display:flex;flex-direction:column;justify-content:space-between}
+    .mini-project h3{font-size:15px;margin:15px 0 8px}
+    .mini-project p{font-size:11px}
+    .mini-project .project-symbol{width:38px;height:38px;font-size:16px}
+    .philosophy{padding:34px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(110deg,#a66cff12,#54e5d409);text-align:center}
+    .flow{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:9px;margin:22px 0 25px}
+    .flow span{font:10px "DM Mono",monospace;padding:11px 13px;border:1px solid var(--line);border-radius:8px;background:#100f19;color:#d8d0e4}
+    .flow i{font-size:10px;color:var(--cyan)}
+    .philosophy blockquote{font:italic 18px Georgia,serif;color:var(--cyan)}
+    .contact-panel{padding:clamp(28px,5vw,54px);display:flex;justify-content:space-between;align-items:center;gap:30px;background:radial-gradient(ellipse at 100% 0%,#54e5d412,transparent 50%),linear-gradient(135deg,#171322,#0e0d16)}
+    .contact-panel h2{max-width:520px}
+    .contact-panel p{color:var(--muted);font-size:13px;margin-top:14px;line-height:1.8}
+    .contact-actions{display:flex;flex-direction:column;gap:10px;min-width:220px}
+    footer{padding:28px 0 36px;border-top:1px solid var(--line)}
+    .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .footer-brand{font:700 13px Orbitron,sans-serif;letter-spacing:2px}
+    .footer-brand b{color:var(--purple)}
+    .foot-note{font-size:9px;color:#777084;letter-spacing:1px}
+    .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    @media(max-width:900px){.hero-grid{gap:28px;grid-template-columns:1.1fr .9fr}.portrait-frame{width:230px}.portrait-stage{min-height:360px}.orbit{width:330px}.stack-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:700px){
+      .wrap{width:min(100% - 34px,var(--max))}.nav-links,.nav-contact{display:none}.menu-btn{display:block}
+      .nav-links.open{display:flex;position:absolute;top:67px;left:17px;right:17px;flex-direction:column;align-items:stretch;gap:0;padding:10px;background:#100f19f5;border:1px solid var(--line);border-radius:15px;backdrop-filter:blur(18px)}
+      .nav-links.open a{padding:14px}.nav-links a.active:after{display:none}
+      .hero{padding:115px 0 75px}.hero-grid{grid-template-columns:1fr;text-align:center;gap:25px}.hero .eyebrow{justify-content:center}.hero-copy{margin:auto}.hero-actions,.social-row{justify-content:center}
+      .portrait-stage{grid-row:1;min-height:300px}.portrait-frame{width:205px}.portrait-glow{width:210px}.orbit{width:285px}.portrait-label{right:0;bottom:4px}
+      h1{letter-spacing:-3px}.scroll-hint{display:none}section{padding:75px 0}
+      .section-head{display:block}.section-desc{margin-top:15px}.about-layout,.project-feature{grid-template-columns:1fr}.about-grid{grid-template-columns:repeat(2,1fr)}
+      .stack-grid{grid-template-columns:1fr}.project-side{grid-template-rows:auto}.contact-panel{align-items:flex-start;flex-direction:column}.contact-actions{width:100%}.contact-actions .btn{justify-content:center}
+      .footer-inner{flex-direction:column;text-align:center}
+    }
+    @media(max-width:390px){.about-grid{grid-template-columns:1fr}.feature-list{grid-template-columns:1fr}.portrait-label{right:-8px}.hero-actions .btn{width:100%;justify-content:center}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+  <header class="nav-shell" id="navShell">
+    <nav class="wrap">
+      <a class="brand" href="#home"><b>❖</b> VANITAS</a>
+      <div class="nav-links" id="navLinks">
+        <a href="#home" class="active">Home</a><a href="#about">About</a><a href="#stack">Expertise</a><a href="#work">Projects</a><a href="#contact">Contact</a>
+      </div>
+      <a class="nav-contact" href="mailto:omar@vanitasbot.my.id">LET'S TALK ↗</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div class="hero-content">
+          <div class="eyebrow">Independent Developer <span style="color:#746b82">/</span> Digital Builder</div>
+          <h1><span>OMAR</span><span>VANITAS.</span></h1>
+          <p class="hero-role">Software Developer · AI · Bots · Automation · Web</p>
+          <p class="hero-copy">I build intelligent systems, useful tools, and digital experiences — turning ideas into software that works.</p>
+          <p class="hero-quote">“Building systems, not just commands.”</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#work">Explore my work <i class="fa-solid fa-arrow-down"></i></a>
+            <a class="btn btn-ghost" href="mailto:omar@vanitasbot.my.id">Get in touch <i class="fa-regular fa-paper-plane"></i></a>
+          </div>
+          <div class="social-row" aria-label="Social links">
+            <a class="social" href="https://github.com/sovereignempirex-ux" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a class="social" href="https://discord.gg/HC2wSQpru" target="_blank" rel="noreferrer" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+            <a class="social" href="https://wa.me/201283073813" target="_blank" rel="noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a class="social" href="mailto:omar@vanitasbot.my.id" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="portrait-stage">
+          <div class="orbit"><span class="orbit-dot"></span></div>
+          <div class="portrait-glow"></div>
+          <div class="portrait-frame"><img src="https://qu.ax/x/OlX7T.jpg" alt="Omar — Vanitas profile portrait" fetchpriority="high"></div>
+          <div class="portrait-label"><strong><span class="status-dot"></span>VANITAS / ONLINE</strong><small>Building what's next</small></div>
+        </div>
+      </div>
+      <div class="scroll-hint">SCROLL TO EXPLORE <i class="fa-solid fa-arrow-down"></i></div>
+    </section>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head reveal"><div><div class="section-kicker">01 / The person behind the code</div><h2>Beyond the screen.</h2></div><p class="section-desc">Curiosity, engineering, and a constant drive to make digital things better.</p></div>
+        <div class="about-layout">
+          <div class="about-panel reveal"><div class="big-mark">❖</div><p>I'm Omar, a software developer focused on creating practical digital products and connected systems. My work spans web development, backend engineering, AI integrations, bots, and automation — with an emphasis on clean structure, thoughtful details, and reliable results.</p></div>
+          <div class="about-grid">
+            <article class="info-card reveal"><i class="fa-solid fa-code"></i><h3>Software Development</h3><p>Building maintainable applications and well-structured software.</p></article>
+            <article class="info-card reveal"><i class="fa-solid fa-brain"></i><h3>Artificial Intelligence</h3><p>Connecting AI capabilities to useful real-world workflows.</p></article>
+            <article class="info-card reveal"><i class="fa-solid fa-robot"></i><h3>Bots & Automation</h3><p>Automated experiences, integrations, and productivity systems.</p></article>
+            <article class="info-card reveal"><i class="fa-solid fa-server"></i><h3>Backend & APIs</h3><p>Server-side logic, API design, and data-driven services.</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stack">
+      <div class="wrap">
+        <div class="section-head reveal"><div><div class="section-kicker">02 / Tools of the trade</div><h2>My tech stack.</h2></div><p class="section-desc">A selection of technologies I work with across development, infrastructure, and delivery.</p></div>
+        <div class="stack-grid">
+          <div class="stack-panel reveal"><h3>01 — Languages</h3><div class="stack-items"><span class="tech">JavaScript</span><span class="tech">Python</span><span class="tech">HTML5</span><span class="tech">CSS3</span><span class="tech">Bash</span></div></div>
+          <div class="stack-panel reveal"><h3>02 — Backend</h3><div class="stack-items"><span class="tech">Node.js</span><span class="tech">Express.js</span><span class="tech">REST APIs</span><span class="tech">Axios</span><span class="tech">Baileys</span></div></div>
+          <div class="stack-panel reveal"><h3>03 — Databases</h3><div class="stack-items"><span class="tech">MongoDB</span><span class="tech">SQLite</span><span class="tech">Firebase</span></div></div>
+          <div class="stack-panel reveal"><h3>04 — Tools</h3><div class="stack-items"><span class="tech">Git</span><span class="tech">GitHub</span><span class="tech">Linux</span><span class="tech">Termux</span><span class="tech">VS Code</span><span class="tech">FFmpeg</span></div></div>
+          <div class="stack-panel reveal"><h3>05 — Deployment</h3><div class="stack-items"><span class="tech">Vercel</span><span class="tech">Netlify</span></div></div>
+          <div class="stack-panel reveal"><h3>06 — Focus Areas</h3><div class="stack-items"><span class="tech">System Design</span><span class="tech">Automation</span><span class="tech">AI Integration</span><span class="tech">Web Apps</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="wrap">
+        <div class="section-head reveal"><div><div class="section-kicker">03 / Selected work</div><h2>Things I build.</h2></div><p class="section-desc">A growing ecosystem of tools and software built around useful experiences and connected technology.</p></div>
+        <div class="project-feature">
+          <article class="project-card primary reveal">
+            <div class="project-top"><div class="project-symbol">❖</div><span class="project-index">FEATURED PROJECT / 001</span></div>
+            <h3>VANITAS</h3>
+            <p>A modular WhatsApp automation system designed to bring powerful tools, intelligent interactions, and flexible features together in one platform.</p>
+            <div class="feature-list"><span><i class="fa-solid fa-check"></i> AI integrations</span><span><i class="fa-solid fa-check"></i> Bot automation</span><span><i class="fa-solid fa-check"></i> Media processing</span><span><i class="fa-solid fa-check"></i> Group management</span><span><i class="fa-solid fa-check"></i> Plugin architecture</span><span><i class="fa-solid fa-check"></i> API integrations</span></div>
+            <a class="btn btn-primary" href="https://vanitasbot.my.id" target="_blank" rel="noreferrer">Explore Vanitas <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </article>
+          <div class="project-side">
+            <article class="project-card mini-project reveal"><div><div class="project-symbol"><i class="fa-solid fa-layer-group"></i></div><h3>Vanitas Ecosystem</h3><p>A connected collection of digital tools and platforms built around the Vanitas identity.</p></div><span class="project-index">ECOSYSTEM / 002</span></article>
+            <article class="project-card mini-project reveal"><div><div class="project-symbol"><i class="fa-solid fa-terminal"></i></div><h3>Developer Utilities</h3><p>Practical tools, integrations, and workflows that make development more efficient.</p></div><span class="project-index">TOOLS / 003</span></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head reveal"><div><div class="section-kicker">04 / How I think</div><h2>Build. Learn. Repeat.</h2></div></div>
+        <div class="philosophy reveal"><div class="flow"><span>IDEA</span><i class="fa-solid fa-arrow-right"></i><span>DESIGN</span><i class="fa-solid fa-arrow-right"></i><span>CODE</span><i class="fa-solid fa-arrow-right"></i><span>TEST</span><i class="fa-solid fa-arrow-right"></i><span>IMPROVE</span><i class="fa-solid fa-arrow-right"></i><span>SHIP</span></div><blockquote>“Every error is another thing to learn from.”</blockquote></div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="contact-panel reveal">
+          <div><div class="section-kicker">05 / Start a conversation</div><h2>Have an idea?<br>Let's build it.</h2><p>For collaborations, projects, or just a good conversation about technology.</p></div>
+          <div class="contact-actions"><a class="btn btn-primary" href="mailto:omar@vanitasbot.my.id"><i class="fa-regular fa-envelope"></i> omar@vanitasbot.my.id</a><a class="btn btn-ghost" href="https://vanitasbot.my.id" target="_blank" rel="noreferrer"><i class="fa-solid fa-globe"></i> vanitasbot.my.id</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap footer-inner"><div class="footer-brand"><b>❖</b> VANITAS</div><div class="foot-note">DESIGNED & BUILT WITH INTENTION · © <span id="year"></span> OMAR</div><a class="foot-note" href="#home">BACK TO TOP ↑</a></div></footer>
+  <script>
+    const navShell=document.getElementById('navShell');
+    const menuBtn=document.getElementById('menuBtn');
+    const navLinks=document.getElementById('navLinks');
+    window.addEventListener('scroll',()=>navShell.classList.toggle('scrolled',window.scrollY>24),{passive:true});
+    menuBtn.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));menuBtn.innerHTML=open?'<i class="fa-solid fa-xmark"></i>':'<i class="fa-solid fa-bars"></i>'});
+    navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.innerHTML='<i class="fa-solid fa-bars"></i>'}));
+    document.getElementById('year').textContent=new Date().getFullYear();
+    const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');revealObserver.unobserve(entry.target)}}),{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
+    const sections=[...document.querySelectorAll('main section[id]')], links=[...document.querySelectorAll('.nav-links a')];
+    const activeObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){links.forEach(link=>link.classList.toggle('active',link.getAttribute('href')==='#'+entry.target.id))}}),{rootMargin:'-35% 0px -55% 0px'});
+    sections.forEach(section=>activeObserver.observe(section));
+  </script>
+</body>
+</html>
