@@ -1,0 +1,16 @@
+{
+  "name": "Omar — Vanitas",
+  "short_name": "VANITAS",
+  "description": "Omar — Software Developer building intelligent systems, automation, bots and digital experiences.",
+  "id": "/",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#08070d",
+  "background_color": "#08070d",
+  "icons": [
+    { "src": "/favicon-32.png", "sizes": "32x32", "type": "image/png" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

@@ -22,7 +22,7 @@
 <a href="https://nexora-yx2o.vercel.app">
   <img src="https://img.shields.io/badge/NEXORA-8A2BE2?style=for-the-badge&logo=vercel&logoColor=white&labelColor=8A2BE2" alt="NEXORA" />
 </a>
-<a href="https://discord.gg/HC2wSQpru">
+<a href="https://discord.gg/qzvHxkmnh">
   <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white&labelColor=5865F2" alt="Discord" />
 </a>
 <a href="https://wa.me/201283073813">
@@ -367,7 +367,7 @@ My approach to building systems follows a clean, layered architecture designed f
 |:---------|:-----|:------:|
 | <img src="https://img.shields.io/badge/Main-000000?style=flat-square&logo=vercel&logoColor=white" /> | <a href="https://nexora-yx2o.vercel.app">**nexora-yx2o.vercel.app**</a> | <img src="https://img.shields.io/badge/Live-00C7B7?style=flat-square" /> |
 | <img src="https://img.shields.io/badge/Secondary-000000?style=flat-square&logo=netlify&logoColor=white" /> | <a href="https://nexorasy.netlify.app">**nexorasy.netlify.app**</a> | <img src="https://img.shields.io/badge/Live-00C7B7?style=flat-square" /> |
-| <img src="https://img.shields.io/badge/Discord-5865F2?style=flat-square&logo=discord&logoColor=white" /> | <a href="https://discord.gg/HC2wSQpru">**discord.gg/HC2wSQpru**</a> | <img src="https://img.shields.io/badge/Active-5865F2?style=flat-square" /> |
+| <img src="https://img.shields.io/badge/Discord-5865F2?style=flat-square&logo=discord&logoColor=white" /> | <a href="https://discord.gg/qzvHxkmnh">**discord.gg/HC2wSQpru**</a> | <img src="https://img.shields.io/badge/Active-5865F2?style=flat-square" /> |
 | <img src="https://img.shields.io/badge/WhatsApp-25D366?style=flat-square&logo=whatsapp&logoColor=white" /> | <a href="https://whatsapp.com/channel/0029Vb8glFqJkK7EdMYrao0K">**WhatsApp Channel**</a> | <img src="https://img.shields.io/badge/Active-25D366?style=flat-square" /> |
 
 </div>
@@ -479,7 +479,7 @@ My approach to building systems follows a clean, layered architecture designed f
   <img src="https://img.shields.io/badge/NEXORA%20Secondary-00C7B7?style=for-the-badge&logo=netlify&logoColor=white&labelColor=00C7B7" alt="NEXORA Secondary" />
 </a>
 &nbsp;
-<a href="https://discord.gg/HC2wSQpru">
+<a href="https://discord.gg/qzvHxkmnh">
   <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white&labelColor=5865F2" alt="Discord" />
 </a>
 &nbsp;

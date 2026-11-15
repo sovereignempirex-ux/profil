@@ -10,6 +10,20 @@
   <meta property="og:image" content="https://qu.ax/x/OlX7T.jpg">
   <meta property="og:type" content="website">
   <title>❖ VANITAS — Omar</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="canonical" href="https://profile.vanitasbot.my.id/">
+  <meta property="og:url" content="https://profile.vanitasbot.my.id/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="❖ VANITAS — Omar">
+  <meta name="twitter:description" content="Building systems, not just commands.">
+  <meta name="twitter:image" content="https://qu.ax/x/OlX7T.jpg">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"Omar","alternateName":"Vanitas","url":"https://profile.vanitasbot.my.id","email":"mailto:omar@vanitasbot.my.id","jobTitle":"Software Developer","description":"Full-stack developer — building the Vanitas platform: API gateway, AI suite, native mobile & desktop clients.","knowsAbout":["TypeScript","Python","Go","Kotlin","Swift","AI Integration","Automation","Backend Engineering","System Design"],"sameAs":["https://github.com/sovereignempirex-ux","https://vanitasbot.my.id"]}
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700;800;900&display=swap" rel="stylesheet">
@@ -23,6 +37,10 @@
     body:after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.12;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:54px 54px;mask-image:linear-gradient(to bottom,black,transparent 85%)}
     a{color:inherit;text-decoration:none}
     button{font:inherit}
+    :focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:6px}
+    .skip-link{position:fixed;top:-60px;left:16px;z-index:80;padding:10px 16px;background:var(--purple);color:#0a0910;border-radius:10px;font:700 12px Inter,sans-serif;transition:top .25s}
+    .skip-link:focus{top:14px}
+    .progress{position:fixed;top:0;left:0;height:2px;width:0;background:linear-gradient(90deg,var(--purple),var(--cyan));z-index:70;pointer-events:none}
     ::selection{background:rgba(166,108,255,.35);color:white}
     ::-webkit-scrollbar{width:7px}::-webkit-scrollbar-track{background:#08070d}::-webkit-scrollbar-thumb{background:#68469b;border-radius:20px}
     .wrap{width:min(var(--max),calc(100% - 48px));margin:auto}
@@ -129,6 +147,10 @@
     .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
     .reveal.visible{opacity:1;transform:translateY(0)}
     .metrics{padding:0 0 8px}
+    .live-tag{display:inline-flex;align-items:center;gap:9px;margin-bottom:12px;padding:8px 14px;border:1px solid var(--line);border-radius:999px;background:#100f19cc;font:600 10px "DM Mono",monospace;letter-spacing:2px;color:#b9e8e0}
+    .live-tag em{font-style:normal;color:#777084;letter-spacing:1px}
+    .live-tag .status-dot{margin-right:0;animation:pulse 2s infinite}
+    @keyframes pulse{50%{box-shadow:0 0 18px #54e5a3;opacity:.75}}
     .metrics-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
     .metric{padding:20px 14px;text-align:center;border:1px solid var(--line);border-radius:16px;background:linear-gradient(145deg,#151321cc,#0f0e17e6)}
     .metric b{display:block;font:800 26px Orbitron,sans-serif;background:linear-gradient(105deg,#c39bff,#68e8d9);-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -160,6 +182,8 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#home">Skip to content</a>
+  <div class="progress" id="progress" aria-hidden="true"></div>
   <header class="nav-shell" id="navShell">
     <nav class="wrap">
       <a class="brand" href="#home"><b>❖</b> VANITAS</a>
@@ -186,8 +210,8 @@
           </div>
           <div class="social-row" aria-label="Social links">
             <a class="social" href="https://github.com/sovereignempirex-ux" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-            <a class="social" href="https://discord.gg/HC2wSQpru" target="_blank" rel="noreferrer" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
-            <a class="social" href="https://wa.me/201283073813" target="_blank" rel="noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a class="social" href="https://discord.gg/qzvHxkmnh" target="_blank" rel="noreferrer" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+            <a class="social" href="https://whatsapp.com/channel/0029Vb8glFqJkK7EdMYrao0K" target="_blank" rel="noreferrer" aria-label="WhatsApp Channel"><i class="fa-brands fa-whatsapp"></i></a>
             <a class="social" href="mailto:omar@vanitasbot.my.id" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
           </div>
         </div>
@@ -201,13 +225,16 @@
       <div class="scroll-hint">SCROLL TO EXPLORE <i class="fa-solid fa-arrow-down"></i></div>
     </section>
 
-    <section class="metrics" aria-label="Project highlights">
-      <div class="wrap metrics-grid">
-        <div class="metric reveal"><b>13</b><span>Test suites · CI-gated</span></div>
-        <div class="metric reveal"><b>10</b><span>CI jobs on every push</span></div>
-        <div class="metric reveal"><b>4</b><span>Platforms · one gateway</span></div>
-        <div class="metric reveal"><b>7</b><span>Locales · Arabic-first RTL</span></div>
-        <div class="metric reveal"><b>0$</b><span>Setup cost · runs DB-free</span></div>
+    <section class="metrics" aria-label="Live platform pulse">
+      <div class="wrap">
+        <div class="live-tag reveal"><span class="status-dot"></span>LIVE · VANITAS PLATFORM<em id="liveStamp"></em></div>
+        <div class="metrics-grid">
+          <div class="metric reveal"><b id="liveUsers">—</b><span>Total users</span></div>
+          <div class="metric reveal"><b id="liveActive">—</b><span>Active · 7 days</span></div>
+          <div class="metric reveal"><b id="liveKeys">—</b><span>API keys</span></div>
+          <div class="metric reveal"><b id="liveReqs">—</b><span>Requests · 24h</span></div>
+          <div class="metric reveal"><b id="liveBots">—</b><span>Bots online</span></div>
+        </div>
       </div>
     </section>
 
@@ -308,6 +335,32 @@
     const sections=[...document.querySelectorAll('main section[id]')], links=[...document.querySelectorAll('.nav-links a')];
     const activeObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){links.forEach(link=>link.classList.toggle('active',link.getAttribute('href')==='#'+entry.target.id))}}),{rootMargin:'-35% 0px -55% 0px'});
     sections.forEach(section=>activeObserver.observe(section));
+    const progress=document.getElementById('progress');
+    const updateProgress=()=>{const h=document.documentElement;progress.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%'};
+    window.addEventListener('scroll',updateProgress,{passive:true});
+    const tiltCard=document.querySelector('.project-card.primary');
+    if(tiltCard&&matchMedia('(pointer:fine)').matches&&!matchMedia('(prefers-reduced-motion:reduce)').matches){
+      tiltCard.addEventListener('mousemove',e=>{const r=tiltCard.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;tiltCard.style.transform=`perspective(950px) rotateX(${(-y*2.5).toFixed(2)}deg) rotateY(${(x*2.5).toFixed(2)}deg) translateY(-4px)`});
+      tiltCard.addEventListener('mouseleave',()=>{tiltCard.style.transform=''});
+    }
+    const COMMUNITY_URL='https://vanitasbot.my.id/api/v1/community';
+    const liveCells=['liveUsers','liveActive','liveKeys','liveReqs','liveBots'].map(id=>document.getElementById(id));
+    function animateValue(el,to){if(to==null||Number.isNaN(Number(to))){el.textContent='—';return}const from=Number(el.dataset.v||0);el.dataset.v=to;if(to===from){el.textContent=to.toLocaleString('en-US');return}const dur=900,t0=performance.now();requestAnimationFrame(function step(t){const p=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-p,3);el.textContent=Math.round(from+(to-from)*e).toLocaleString('en-US');if(p<1)requestAnimationFrame(step)})}
+    async function loadLive(){
+      try{
+        const r=await fetch(COMMUNITY_URL,{cache:'no-store'});if(!r.ok)throw new Error(r.status);
+        const d=await r.json();
+        animateValue(liveCells[0],d.users?.total);animateValue(liveCells[1],d.users?.active7d);
+        animateValue(liveCells[2],d.activeApiKeys);animateValue(liveCells[3],d.requests24h);
+        animateValue(liveCells[4],d.botsOnline);
+        const st=document.getElementById('liveStamp');
+        if(st)st.textContent=' · updated '+new Date(d.generatedAt).toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});
+      }catch(err){
+        liveCells.forEach(c=>{c.textContent='—';c.dataset.v=''});
+      }
+    }
+    loadLive();
+    setInterval(loadLive,60000);
   </script>
 </body>
 </html>
